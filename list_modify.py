@@ -1,5 +1,3 @@
-# Replace the "ANSWER HERE" for your answer
-
 def put(value, lst):
     """
     Coloca value en el primer lugar vacio ("") que encuentre en lst
@@ -12,7 +10,14 @@ def put(value, lst):
         put("Blue", colors) -> 1
         # colors ahora es ["Red", "Blue", "Green"]
     """
-    return "ANSWER HERE"  # Remove this line and implement
+
+    if "" in lst:
+        for i in range(len(lst)):
+            if lst[i] == "":
+                lst[i] = value
+                return i
+    else:
+        return -1
 
 
 def remove(value, lst):
@@ -26,4 +31,12 @@ def remove(value, lst):
         remove("Red", colors) -> 2
         # colors ahora es ["", "Green", "", "Blue"]
     """
-    return "ANSWER HERE"  # Remove this line and implement
+    contador = 0
+    if value in lst:
+        for i in range(len(lst)):
+            if lst[i] == value:
+                lst[i] = ""
+                contador += 1
+        return contador
+    else:
+        return 0
