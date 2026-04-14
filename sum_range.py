@@ -1,5 +1,3 @@
-# Replace the "ANSWER HERE" for your answer
-
 def sum_to_n(n):
     """
     Retorna la suma de todos los enteros desde 1 hasta n (inclusive).
@@ -7,8 +5,14 @@ def sum_to_n(n):
 
     Ejemplo: sum_to_n(5) -> 15  (1+2+3+4+5)
     """
-    return "ANSWER HERE"  # Remove this line and implement
+    suma_total = 0
+    if n <= 0:
+        suma_total = 0
+    else:
+        for i in range(1, n+1):
+            suma_total += i
 
+    return suma_total
 
 def sum_evens(n):
     """
@@ -17,7 +21,14 @@ def sum_evens(n):
 
     Ejemplo: sum_evens(10) -> 30  (2+4+6+8+10)
     """
-    return "ANSWER HERE"  # Remove this line and implement
+    suma_total = 0
+    if n <= 0:
+        suma_total = 0
+    else:
+        for i in range(1, n+1):
+            if i % 2 == 0:
+                suma_total += i
+    return suma_total
 
 
 def factorial(n):
@@ -27,4 +38,10 @@ def factorial(n):
 
     Ejemplo: factorial(5) -> 120  (1*2*3*4*5)
     """
-    return "ANSWER HERE"  # Remove this line and implement
+    total = 1
+    if n <= 0:
+        total = 1
+    else:
+        for i in range(1, n+1):
+            total *= i
+    return total
