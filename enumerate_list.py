@@ -1,5 +1,3 @@
-# Replace the "ANSWER HERE" for your answer
-
 def enumerate_list(lst):
     """
     Dada una lista de strings, retorna una nueva lista donde cada elemento
@@ -9,8 +7,13 @@ def enumerate_list(lst):
 
     Ejemplo: enumerate_list(["Red", "Green", "", "White"]) -> ["0. Red", "1. Green", "2. White"]
     """
-    return "ANSWER HERE"  # Remove this line and implement
-
+    lista_nueva = []
+    indice = -1
+    for item in lst:
+        if item != "":
+            indice += 1
+            lista_nueva.append(f"{indice}. {item}")
+    return lista_nueva
 
 def enumerate_backwards(lst):
     """
@@ -19,4 +22,10 @@ def enumerate_backwards(lst):
 
     Ejemplo: enumerate_backwards(["Red", "Green", ""]) -> ["0. deR", "1. neerG"]
     """
-    return "ANSWER HERE"  # Remove this line and implement
+    lista_nueva = []
+    indice = -1
+    for item in lst:
+        if item != "":
+            indice += 1
+            lista_nueva.append(f"{indice}. {item[::-1]}")
+    return lista_nueva
